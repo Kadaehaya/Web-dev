@@ -1,0 +1,32 @@
+<div class="grid">
+
+<div class="card" *ngFor="let p of products">
+
+<img [src]="p.image">
+
+<h3>{{p.name}}</h3>
+
+<p>{{p.description}}</p>
+
+<b>{{p.price | number}} ₸</b>
+
+<div class="stars">
+<span *ngFor="let s of stars(p.rating)">⭐</span>
+</div>
+
+<div class="thumbs">
+<img *ngFor="let img of p.images"
+     [src]="img"
+     (click)="changeImage(p,img)">
+</div>
+
+<div class="share">
+<button (click)="shareWhatsApp(p.link)">WhatsApp</button>
+<button (click)="shareTelegram(p.link,p.name)">Telegram</button>
+</div>
+
+<a [href]="p.link" target="_blank">Open on Kaspi</a>
+
+</div>
+
+</div>
