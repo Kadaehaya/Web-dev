@@ -1,0 +1,22 @@
+<div class="header">
+  <h1 class="title">Online Store</h1>
+</div>
+
+<div class="categories">
+  @for (cat of categories; track cat.id) {
+    <button
+      [class.active]="cat.id === selectedCategoryId"
+      (click)="selectCategory(cat.id)">
+      {{ cat.name }}
+    </button>
+  }
+</div>
+
+@if (selectedCategoryId === null) {
+  <div class="welcome">
+    <h2>Выбери категорию 👆</h2>
+    <p>После выбора появятся товары. Можно лайкать, делиться и удалять.</p>
+  </div>
+} @else {
+  <app-product-list [products]="products"></app-product-list>
+}

@@ -1,0 +1,17 @@
+.grid{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+  gap:18px;
+}
+
+.empty{
+  max-width:1100px;
+  margin:0 auto;
+  padding:16px;
+  background:white;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  color:#374151;
+}

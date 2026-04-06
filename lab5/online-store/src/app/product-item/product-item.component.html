@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="image-wrap">
+  <img class="img" [src]="product.image" [alt]="product.name" />
+</div>
+
+  <div class="body">
+    <h3 class="name">{{ product.name }}</h3>
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ product.price | number }} ₸</div>
+
+      <div class="badges">
+        <span class="badge">⭐ {{ product.rating }}</span>
+        <span class="badge">❤ {{ product.likes }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-like" (click)="like()">Like</button>
+      <button class="btn btn-share" (click)="shareWhatsApp()">Share</button>
+      <button class="btn btn-del" (click)="remove()">Delete</button>
+    </div>
+
+    <a class="link" [href]="product.link" target="_blank">Open on Kaspi</a>
+  </div>
+</div>

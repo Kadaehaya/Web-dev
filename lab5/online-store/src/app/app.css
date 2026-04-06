@@ -1,0 +1,63 @@
+:host{
+  display:block;
+  min-height:100vh;
+  background:#f3f4f6;
+  padding:24px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.header{
+  max-width:1100px;
+  margin:0 auto 16px auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.title{
+  font-size:32px;
+  font-weight:800;
+  margin:0;
+  letter-spacing:-0.5px;
+}
+
+.categories{
+  max-width:1100px;
+  margin:0 auto 18px auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.categories button{
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid #d1d5db;
+  background:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.categories button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.categories button.active{
+  background:#111827;
+  color:white;
+  border-color:#111827;
+}
+
+.welcome{
+  max-width:1100px;
+  margin:18px auto 0 auto;
+  padding:18px;
+  background:white;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  box-shadow:0 10px 22px rgba(0,0,0,.06);
+  color:#374151;
+}

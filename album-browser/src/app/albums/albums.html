@@ -1,0 +1,21 @@
+<h1>Albums</h1>
+
+@if (loading) {
+  <p>Loading albums...</p>
+} @else if (error) {
+  <p>{{ error }}</p>
+} @else if (albums.length === 0) {
+  <p>No albums found.</p>
+} @else {
+  <div class="album-list">
+    @for (album of albums; track album.id) {
+      <div class="album-card">
+        <a [routerLink]="['/albums', album.id]">
+          <strong>{{ album.id }}</strong> — {{ album.title }}
+        </a>
+
+        <button (click)="deleteAlbum(album.id)">Delete</button>
+      </div>
+    }
+  </div>
+}

@@ -1,0 +1,18 @@
+<h1>Album {{ albumId }} Photos</h1>
+
+@if (loading) {
+  <p>Loading photos...</p>
+} @else if (photos.length === 0) {
+  <p>No photos found.</p>
+} @else {
+  <div class="photo-grid">
+    @for (photo of photos; track photo.id) {
+      <div class="photo-card">
+        <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+        <p>{{ photo.title }}</p>
+      </div>
+    }
+  </div>
+}
+
+<button (click)="goBack()">Back</button>
